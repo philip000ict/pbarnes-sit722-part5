@@ -33,7 +33,7 @@ jobs:
         
       # Bash permission.
       - name: Push-chmod
-        run:  chmod +x scripts/build-image.sh
+        run:  chmod +x scripts/push-image.sh
 
       # Publishes the Docker image to the container registry.
       - name: Publish
