@@ -1,1 +1,24 @@
 # Your Solution
+version: "3.0"
+services:
+  inventory-management:
+    build: inventory-management .
+    image: inventory-management:1
+    container_name: project-inv
+    ports:
+      - "8000:80"
+  book-catalog:
+    build: book-catalog .
+    image: book-catalog:1
+    container_name: project_book
+    ports:
+      - "8080:80"
+  db:
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=tnVgJgizfyAb8AjrzntpIe0Yh8mFtG3A 
+      - POSTGRES_USER=pbarnes722part5_user
+      - POSTGRES_DB=dpg-cruaaj8gph6c73af6cbg-a.oregon-postgres.render.com
+    ports:
+      - '5432:5432'# Your Solution
