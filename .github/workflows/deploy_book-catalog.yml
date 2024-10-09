@@ -5,7 +5,7 @@
 # For real use you might want to restrict this to the "prod" branch.
 #
 
-name: Deploy gateway
+name: Deploy book-catalog
 
 on:
   #
